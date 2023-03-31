@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+header{
+  text-align: right;
+  min-height: 120px;
+}
+
+/* Mueve la imagen a la izquierda */
+header img {float: left;}
+
+#logo {
+  width: 100px;
+  border-width: 3px;
+  border-color: darkcyan;
+  border-style: solid;
+  border-radius: 15%;
+}
+
+#logo2 {
+  border-radius: 5%;
+  width: 500px;
+}
+
+header nav {
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  float: right;
+  display: flex;
+}
+
+header nav .link {
+  background-color: #007aff;
+  padding: 5px;
+  display:inline-block;
+  color: black;
+  text-decoration: none;
+  font-family: arial;
+  border-right: 2px solid black;
+}
+
+header nav .link:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+header nav .link:last-child {
+  border-right: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;  
+}
+
+header nav .link:hover{
+  background-color: #0054b1;
+}
+
+section {
+  text-align: center;
+}
+section img {
+  width: 50%;
+}
+section p {
+  text-align: justify;
+}
+section p span {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.calcetas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calcetas img:first-child {
+  width: 200px;
+  border-width:5px;
+  border-color: darkgreen;
+  border-style: double;
+}
+.calcetas img:last-child {
+  width: 210px;
+  border-width:5px;
+  border-color: darkgreen;
+  border-style: double;
+}
+
+section h1 {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-family:Courier New
+  }
+
+/* CSS phones */
+@media only screen and (max-width: 600px) {
+  body {
+    background: darkseagreen;
+  }
+  .calcetas {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav .link{
+    background-color: white;
+  }
+  #logo2{
+    width: 300px;
+  }
+  header img{
+    float: none;
+  }
+  header nav{
+    float: none;
+    margin-top: 20px;
+  }
+  header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section p{
+    font-size: 18px;
+  }
+}
+/* CSS tablets */
+@media only screen and (min-width: 600px) {
+  body {
+    background: lightpink;
+  }
+  header nav .link{
+    background-color: orangered;
+  }
+}
+/* CSS laptops */
+@media only screen and (min-width: 992px) {
+  body {
+    background: skyblue
+  }
+  header nav .link{
+    background-color: #007aff;
+  }
+}
